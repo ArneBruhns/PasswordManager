@@ -1,0 +1,28 @@
+Das RSA-Verfahren ist ein asymmetrisches Verschlüsselungsverfahren. Das heißt, der Sender verschlüsslet seinen Klartext mit dem öffentlichen Schlüssel (Public Key) und der Empfänger entschlüsselt das Ergebnis, den Geheimtext, mit dem zugehörigen privaten Schlüssel (Private Key).
+Asymmetrische Verfahren beruhen auf dem Begriff der Einbahnfunktion oder Einwegfunktion, hier realisiert dadurch, dass es leicht ist, den Geheimtext mit einer wie breits erwähnten Einbahnfunktion zu berechnen, aber praktisch unmöglich, die Umkehrfunktion zu berechnen. Nur durch den privaten Schlüssel lässt sich die Funktion wieder umkehren, sodass der Geheimtext wieder entschlüsslet werden kann.
+Zu beachten ist, dass der Klartext in seine einzelnen Zeichen aufgeteilt wird und diese jeweils unabhängig von einander verschlüsslet bzw. entschlüsselt werden.
+
+In weiteren Verlauf werden sich nun auf Abkürzungen bezogen:
+	P   	-> 	Erste Primzahl
+	Q   	-> 	Zweite Primzahl
+	N   	-> 	Öffentliche Zahl (RSA-Modul)
+	PHI 	-> 	Ergebnis von PHI(N)
+	E   	->	Öffentlicher Schlüssel
+	D   	-> 	Geheimer Schlüssel
+	M   	-> 	Klartext (m < n, gilt für die einzelnen Buchtstaben)
+	C   	-> 	Geheimtext
+
+Um RSA zu knacken, müsste ein unbefugter Dritter versuchen, den privaten Schlüssel d aus dem öffentlichen Schlüssel e zu berechnen oder PHI(N) irgendwie zu bestimmen. Tatsache ist, dass beides so schwer ist, wie die Primfaktorzerlegung n = p*q zu berechnen. Dieses ist zu rechenaufwendig. Zu beachten ist natürlich, dass eine solch hohe Sicherheit nur gewährleistet ist, wenn ausreichend große Zahlen gewählt sind (vgl. mindestens 512 Bit).
+
+Die Berechnung des öffentlichen und privaten Schritten erfolgt in drei Schritte.
+
+ERTSER SCHRITT:
+Als erstes müssen zwei ungleiche Primzahlen p und q eingegeben werden. Aus diesen wird das RSA-Modul n mittels n = p*g berechnen und PHI(N) mittels PHI(N) = (p - 1)*(q-1) bestimmt. PHI(N) wird ausgegeben.
+
+ZWEITER SCHRITT:
+Als nächstes muss der öffentliche Schlüssel e vom User selbst bestimmt werden. Es ist zu beachten dass für den öffentlichen Schlüssel 1 < e < PHI(N) gilt und dieser teilerfremd zu PHI(N) ist.
+
+DRITTER SCHRITT:
+Zum Schluss wird der private Schlüssel d mit Hilfe des öffentlichen Schlüssels und PHI(N) berechnet. Hierbei wird das multiplikative Inverse angewendet. 
+
+Für eine detaillierte Beschreibung und Erklärung der Berechnungen des öffentlichen und privaten Schlüssels ist es nötig, im Netz danach zu recherchieren. Es wäre viel zu aufwenidg und umfangreich hier alles genau zu erläutern.

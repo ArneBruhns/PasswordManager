@@ -194,3 +194,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/linux,windows,eclipse,intellij
+*.MF
+*.iml
+Project/.idea/artifacts/PasswordManager_jar.xml
+Project/.idea/encodings.xml
+Project/.idea/libraries/org_jdom_jdom2_2_0_6.xml
+Project/.idea/misc.xml
+Project/.idea/modules.xml
+Project/.idea/uiDesigner.xml
+Project/.idea/workspace.xml

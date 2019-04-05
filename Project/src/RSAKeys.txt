@@ -1,0 +1,3 @@
+RSA-Modul N: 0
+PHI: 0
+Öffentlicher Schlüssel: 0
